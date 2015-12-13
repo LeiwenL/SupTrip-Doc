@@ -1,8 +1,3 @@
-require 'rubygems'
-require 'middleman/rack'
-
-run Middleman.server
-
 # Markdown
 set :markdown_engine, :redcarpet
 set :markdown,
@@ -42,3 +37,8 @@ configure :build do
   # activate :gzip
 end
 
+namespace :assets do
+task :precompile do
+    sh "middleman build"
+end
+end
