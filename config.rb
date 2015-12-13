@@ -36,9 +36,3 @@ configure :build do
   # activate :asset_hash
   # activate :gzip
 end
-
-namespace :assets do
-task :precompile do
-    sh "middleman build"
-end
-end
